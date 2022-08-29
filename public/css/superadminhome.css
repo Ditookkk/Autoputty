@@ -1,0 +1,227 @@
+/* main setup */
+/* *{
+	margin: 0 ;
+	padding: 0 ;
+	box-sizing: border-box;
+} */
+body{
+	background-color: #eee;
+	font-family: 'LATO', 'Helvetica Neue', 'Helvetica', 'Arial', 'Tahoma', sans-serif;
+	font-size: 10px;
+	text-rendering: optimizeLegibility;
+	color: #444;
+}
+a{
+  text-decoration: none !important;
+}
+/* general setup for main-header */
+.main-header{
+	background-color: #444;
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 10000;
+}
+/* now we will work with logo in the main-header */
+.main-header .logo{
+	background-color: #444;
+	display: block;
+	width: 250px;
+	height: 60px;
+	float: left;
+	line-height: 50px;
+	text-align: center;
+	color: #f8f8f8;
+} 
+/* for small logo */
+.main-header .logo .logo-small{
+	display: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 200%;
+}
+/* for large logo */
+.main-header .logo .logo-large{
+	display: block;
+	font-size: 160%;
+	color: #C0C0C0;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+/* for littlle icon who help us to collapse the side bar */
+#btn-sidebar-collapse{
+	color: #f8f8f8;
+	font-size: 200%;
+	padding: 15px !important;
+	float: left;
+	/* background-color: #f39; */
+	height: 60px;
+}
+/* setup the navbar now */
+.main-header .navbar-static-top{
+	margin-left: 250px !important;
+	height: 60px !important;
+	color: #f8f8f8 !important;
+	background-color: #444 !important;
+	margin-bottom: 0 !important;
+}
+.navbar-toggle{
+	display: none !important;/*hethi 7atineha bech na7o toggle jemla mel header nav bar*/
+}
+/* setup the nav bar */
+.main-header .navbar-static-top #navbar{
+	/* float: right !important; */
+	background-color: #444 !important;
+	height: 60px !important;
+	/* margin-right: 150px !important;  */
+}
+/* setup the a tag of ul with id navbar */
+.main-header .navbar-static-top #navbar ul.navbar-nav li a{
+	height: 60px !important;
+	color: #f8f8f8;
+	font-size: 120%;
+}
+.main-header .navbar-static-top #navbar ul.dropdown-menu li a{
+	color: #444 !important;
+	font-size: 100% !important;
+	height: 20px !important;
+}
+.main-header .navbar-static-top #navbar ul.navbar-nav li a:hover,
+.main-header .navbar-static-top #navbar ul.navbar-nav li a:focus{
+	background-color: rgba(127, 255, 0, 1);
+}
+/* we work with clyphicon on top */
+.main-header .navbar-static-top #navbar ul.navbar-nav li a span.glyphicon{
+	font-size: 150%;
+}
+/* now we work with labels */
+.main-header .navbar-static-top #navbar ul.navbar-nav li a span.label{
+	position: absolute;
+	top: 8px;
+	right: 6px;
+	padding: 2px;
+	font-size: 10px;
+	border-radius: 50%;
+	min-width: 15px;
+	box-shadow: 2px 2px 2px #333;
+}
+/* setup the main sidebar */
+.main-sidebar{
+	padding-top: 60px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 100%;
+	background-color: #444;
+	transition: all ease 0.5s
+}
+/* now we'll work on global nav */
+.main-sidebar .globalnav{
+	padding: 0;
+	border-bottom: 1px solid #ccc;
+}
+.main-sidebar .globalnav a{
+	display: block;
+	color: #f8f8f8;
+	font-size: 150%;
+	padding: 10px;
+	background-color: rgba(127, 255, 0, 1);
+}
+/* now we work with a tag who has chils */
+.main-sidebar .globalnav a.has-childs:after{
+	font-family: 'Glyphicons Halflings'; 
+	content: "\e114"; /*for arrow down*/
+	float: right;
+	color: inherit;
+}
+.main-sidebar .globalnav a.collapsed:after{
+	content: "\e080"; /*for arrow right*/
+}
+/* work with subnav */
+.main-sidebar .subnav{
+	margin: 0; 
+	padding: 0;
+}
+.main-sidebar .subnav li{
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.main-sidebar .subnav a{
+	display: block;
+	margin: 0; 
+	padding: 10px;
+}
+.main-sidebar .globalnav-header a,
+.main-sidebar .subnav li a{
+	border-left: 2px solid #59abe3;
+	/* border-bottom: 1px solid #eee; */
+	/* box-shadow: 1px 1px 1px #333; */
+}
+.main-sidebar .globalnav-header a:hover,
+.main-sidebar .subnav li a:hover{
+	background-color: #59abe3;
+	transition: ease-in 0.5s;
+}
+/* content setup here */
+.content-wrapper{
+	width: 100%;
+	height: 100%;
+	margin-top: 50px;
+	margin-left: 250px;
+	transition: all ease 0.5s;
+}
+.content-wrapper h1{
+	color: #555;
+}
+.content-wrapper .container-fluid{
+	margin-right: 10% !important;
+}
+.content-wrapper .content{
+	padding-right: 10%;
+}
+/* now we setup the class has-mini-sidebar elements */
+.has-mini-sidebar .main-header .navbar-static-top{
+	margin-left: 60px !important;
+	transition: all ease 0.5s !important;
+}
+.has-mini-sidebar .main-header .logo{
+	width: 60px;
+	transition: all ease 0.5s !important;
+}
+.has-mini-sidebar .main-header .logo .logo-large{
+	display: none;
+}
+.has-mini-sidebar .main-header .logo .logo-small{
+	display: block;
+	font-size: 180%;
+	transition: all ease 0.5s !important;
+}
+.has-mini-sidebar .main-sidebar{
+	width: 60px;
+	transition: all ease 0.5s;
+}
+.has-mini-sidebar .main-sidebar .globalnav .globalnav-header a span.hidden-on-collapse,
+.has-mini-sidebar .main-sidebar .globalnav .globalnav-header a:after,
+.has-mini-sidebar .main-sidebar .globalnav .subnav a span.hidden-on-collapse{
+	display: none;
+}
+.has-mini-sidebar .main-sidebar .globalnav .globalnav-header a span,
+.has-mini-sidebar .main-sidebar .globalnav .subnav a span{
+	/* color: red !important; */
+	margin-left: 5px;
+	font-size: 150%;
+}
+.has-mini-sidebar .content-wrapper{
+	margin-left: 60px;
+	transition: all ease 0.5s;
+}
+.has-mini-sidebar .content-wrapper .container-fluid{
+	margin-right: 1% !important;
+}
+.has-mini-sidebar .content-wrapper .content{
+	padding-right: 3%;
+}
